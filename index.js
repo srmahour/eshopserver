@@ -37,6 +37,11 @@ app.post("/api/create-checkout-session",async(req,res)=>{
 })
 
 
+app.get('/', function(req, res){
+    res.send('Hello it is working my express project')
+})
+
+
 app.listen(1992,()=>{
     console.log("server start")
 })
