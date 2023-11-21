@@ -33,8 +33,8 @@ app.post("/api/create-checkout-session",async(req,res)=>{
         phone_number_collection: {
             enabled: true,
         },
-        success_url:"http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}",
-        cancel_url:"http://localhost:5173/cancel",
+        success_url:`${process.env.FRONTEND_URL}success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url:`${process.env.FRONTEND_URL}cancel`,
     });
 
     
